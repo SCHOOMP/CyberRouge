@@ -1,0 +1,14 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1740528462
+apple.webp::CompressedTexture2D::1454314668460260335::1740496493::1740528463::1::::<><>::
+icon.svg::CompressedTexture2D::8963914336503554753::1740340702::1740528462::1::::<><>::
+::res://Scenes/::1740528035
+bullet_scene.tscn::PackedScene::504601435130982933::1740496339::0::1::::<><>::res://Scripts/bullet_script.gd<>uid://d0ygmhs6ktjs8::::res://icon.svg
+character.tscn::PackedScene::3430589555089856950::1740521687::0::1::::<><>::res://Scripts/character_body_2d.gd<>uid://d0ygmhs6ktjs8::::res://icon.svg
+HUD.tscn::PackedScene::1300055444157511294::1740521687::0::1::::<><>::
+pickup.gd::GDScript::-1::1740518569::0::1::::<>Sprite2D<>::
+pickup.tscn::PackedScene::5325951994149735545::1740521687::0::1::::<><>::res://Scenes/pickup.gd<>uid://uyql5y1u3b5p::::res://apple.webp
+world.tscn::PackedScene::7264234492632307176::1740528035::0::1::::<><>::uid://bo42kq6m8yqks::::res://Scenes/character.tscn<>uid://ch46we2ip68j2::::res://Scenes/pickup.tscn<>uid://sr0yubvljyu5::::res://Scenes/HUD.tscn
+::res://Scripts/::1740528035
+bullet_script.gd::GDScript::-1::1740496332::0::1::::<>Area2D<>::
+character_body_2d.gd::GDScript::-1::1740528035::0::1::::<>CharacterBody2D<>::

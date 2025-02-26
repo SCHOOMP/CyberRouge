@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ch46we2ip68j2"]
+
+[ext_resource type="Script" path="res://Scenes/pickup.gd" id="1_aukpb"]
+[ext_resource type="Texture2D" uid="uid://uyql5y1u3b5p" path="res://apple.webp" id="2_fmfr2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8lgkk"]
+radius = 341.71
+height = 760.789
+
+[node name="Pickup" type="Sprite2D"]
+position = Vector2(1.90735e-06, -1.90735e-06)
+scale = Vector2(0.310204, 0.308163)
+texture = ExtResource("2_fmfr2")
+script = ExtResource("1_aukpb")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-3.2237, 6.49007)
+shape = SubResource("CapsuleShape2D_8lgkk")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
