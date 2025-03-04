@@ -1,1 +1,6 @@
 res://Scenes/world.tscn
+res://Scenes/Enemy.tscn
+res://Scenes/enemy.gd
+res://Scenes/HUD.tscn
+res://Scenes/character.tscn
+res://Scripts/character_body_2d.gd

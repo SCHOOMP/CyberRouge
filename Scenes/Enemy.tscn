@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://lr24x5o52koa"]
+
+[ext_resource type="Script" path="res://Scenes/enemy.gd" id="1_axhdc"]
+[ext_resource type="Texture2D" uid="uid://chn6pm7vs8mea" path="res://orc07.png" id="2_8eo2k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_olfof"]
+radius = 84.0238
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l208l"]
+radius = 375.201
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqkpq"]
+size = Vector2(175, 184)
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_axhdc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.308735, 0.318882)
+texture = ExtResource("2_8eo2k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_olfof")
+
+[node name="detection_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
+shape = SubResource("CircleShape2D_l208l")
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(1.5, 1)
+shape = SubResource("RectangleShape2D_lqkpq")
+
+[connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_shape_exited" from="detection_area" to="." method="_on_detection_area_body_shape_exited"]

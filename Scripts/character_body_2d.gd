@@ -11,6 +11,12 @@ extends CharacterBody2D
 @onready var firePoint = $FirePoint  # Reference to the Muzzle node
 @onready var speed_label = $HUD/SpeedLabel
 
+var enemy_in_attack_range = false
+var attack_cooldown = true
+var health = 100
+var player_alive = true
+
+
 var last_direction = Vector2.ZERO
 var is_dashing = false
 var dash_timer = 0.0
@@ -50,7 +56,13 @@ func start_dash():
 		velocity = last_direction * dash_speed  # Apply burst of speed
 
 func _physics_process(delta):
+	if (health <= 0):
+		player_alive = false
+		health = 0
+		self.queue_free()
+		print('Player Killed')
 	var direction = get_input()
+	take_damage()
 
 	# Speed boost timer logic
 	if boost_timer > 0:
@@ -87,3 +99,24 @@ func shoot():
 func update_speed_display() -> void:
 	if speed_label:
 		speed_label.text = "Speed: " + str(speed)  # Update UI speed text
+
+
+func _on_hitbox_body_entered(body: Node2D) -> void:
+	if body.has_method("damage"):
+		enemy_in_attack_range = true
+		
+func _on_hitbox_body_exited(body: Node2D) -> void:
+	if body.has_method("damage"):
+		enemy_in_attack_range = false
+		
+func take_damage():
+	if enemy_in_attack_range and attack_cooldown:
+		health = health - 20
+		attack_cooldown = false
+		$AttackCooldown.start()
+		print(health)
+	
+
+
+func _on_attack_cooldown_timeout() -> void:
+	attack_cooldown = true
