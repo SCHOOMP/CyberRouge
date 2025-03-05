@@ -7,3 +7,5 @@ res://Scripts/bullet_script.gd
 res://Scripts/character_body_2d.gd
 res://Scenes/enemy.gd
 res://Scripts/pickup.gd
+res://Scripts/enemy.gd
+res://Scenes/Player.tscn

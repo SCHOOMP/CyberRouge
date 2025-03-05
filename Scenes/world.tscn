@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://dbq347gaj654o"]
 
-[ext_resource type="PackedScene" uid="uid://bo42kq6m8yqks" path="res://Scenes/character.tscn" id="1_v0wtq"]
+[ext_resource type="PackedScene" uid="uid://bo42kq6m8yqks" path="res://Scenes/Player.tscn" id="1_v0wtq"]
 [ext_resource type="PackedScene" uid="uid://ch46we2ip68j2" path="res://Scenes/pickup.tscn" id="2_oirxp"]
 [ext_resource type="PackedScene" uid="uid://sr0yubvljyu5" path="res://Scenes/HUD.tscn" id="2_sy513"]
 [ext_resource type="PackedScene" uid="uid://lr24x5o52koa" path="res://Scenes/Enemy.tscn" id="4_dqqll"]
 
 [node name="World" type="Node2D"]
 
-[node name="PlayerCharacter" parent="." groups=["Player"] instance=ExtResource("1_v0wtq")]
+[node name="PlayerCharacter" parent="." groups=["player"] instance=ExtResource("1_v0wtq")]
 position = Vector2(1, 2)
 
 [node name="HUD" parent="PlayerCharacter" instance=ExtResource("2_sy513")]
@@ -27,3 +27,9 @@ scale = Vector2(0.116327, 0.111224)
 
 [node name="Enemy" parent="." instance=ExtResource("4_dqqll")]
 position = Vector2(417, -171)
+
+[node name="Enemy2" parent="." instance=ExtResource("4_dqqll")]
+position = Vector2(-466, -226)
+
+[node name="Enemy3" parent="." instance=ExtResource("4_dqqll")]
+position = Vector2(-464, 246)

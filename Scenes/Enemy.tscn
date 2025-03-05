@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://lr24x5o52koa"]
 
-[ext_resource type="Script" path="res://Scenes/enemy.gd" id="1_axhdc"]
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_axhdc"]
 [ext_resource type="Texture2D" uid="uid://chn6pm7vs8mea" path="res://orc07.png" id="2_8eo2k"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_olfof"]
@@ -32,6 +32,9 @@ shape = SubResource("CircleShape2D_l208l")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
 position = Vector2(1.5, 1)
 shape = SubResource("RectangleShape2D_lqkpq")
+
+[node name="AttackTimer" type="Timer" parent="."]
+wait_time = 0.5
 
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_shape_exited" from="detection_area" to="." method="_on_detection_area_body_shape_exited"]
