@@ -6,3 +6,4 @@ res://Scenes/bullet_scene.tscn
 res://Scripts/bullet_script.gd
 res://Scripts/character_body_2d.gd
 res://Scenes/enemy.gd
+res://Scripts/pickup.gd

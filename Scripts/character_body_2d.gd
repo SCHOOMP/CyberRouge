@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
 @export var speed = 200
-@export var dash_speed = 600  # Speed boost during dash
-@export var dash_duration = 0.2  # How long dash lasts (seconds)
-@export var dash_cooldown = 0.5  # Time before dashing again
+@export var dash_speed = 600 
+@export var dash_duration = 0.2 
+@export var dash_cooldown = 0.5 
 @export var friction = 0.01
 @export var acceleration = 0.1
 
