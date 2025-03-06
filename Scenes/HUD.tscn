@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://sr0yubvljyu5"]
+[gd_scene load_steps=3 format=3 uid="uid://sr0yubvljyu5"]
 
-[ext_resource type="Script" path="res://Scenes/hud.gd" id="1_2y3m7"]
+[ext_resource type="Script" path="res://Scripts/XP Label.gd" id="1_2y3m7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t5k8q"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -18,4 +20,7 @@ text = "Speed: "
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_t5k8q")
+horizontal_alignment = 1
+vertical_alignment = 1
 script = ExtResource("1_2y3m7")

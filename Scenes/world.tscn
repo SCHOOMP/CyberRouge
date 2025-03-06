@@ -12,12 +12,12 @@ script = ExtResource("1_w0xux")
 [node name="PlayerCharacter" parent="." groups=["player"] instance=ExtResource("1_v0wtq")]
 position = Vector2(1, 2)
 
-[node name="HUD" parent="PlayerCharacter" instance=ExtResource("2_sy513")]
-
 [node name="Camera2D" type="Camera2D" parent="PlayerCharacter"]
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 rotation_smoothing_enabled = true
+
+[node name="HUD" parent="PlayerCharacter" instance=ExtResource("2_sy513")]
 
 [node name="Pickup" parent="." instance=ExtResource("2_oirxp")]
 position = Vector2(294, 41.5)
