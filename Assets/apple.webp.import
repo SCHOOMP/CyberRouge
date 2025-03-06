@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://uyql5y1u3b5p"
-path="res://.godot/imported/apple.webp-b117bd96f879df483831d0346076106c.ctex"
+path="res://.godot/imported/apple.webp-6c5ce8453ea807a18d67875a7dccd0f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://apple.webp"
-dest_files=["res://.godot/imported/apple.webp-b117bd96f879df483831d0346076106c.ctex"]
+source_file="res://Assets/apple.webp"
+dest_files=["res://.godot/imported/apple.webp-6c5ce8453ea807a18d67875a7dccd0f4.ctex"]
 
 [params]
 

@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://dbq347gaj654o"]
+[gd_scene load_steps=6 format=3 uid="uid://dbq347gaj654o"]
 
 [ext_resource type="PackedScene" uid="uid://bo42kq6m8yqks" path="res://Scenes/Player.tscn" id="1_v0wtq"]
+[ext_resource type="Script" path="res://Scenes/world.gd" id="1_w0xux"]
 [ext_resource type="PackedScene" uid="uid://ch46we2ip68j2" path="res://Scenes/pickup.tscn" id="2_oirxp"]
 [ext_resource type="PackedScene" uid="uid://sr0yubvljyu5" path="res://Scenes/HUD.tscn" id="2_sy513"]
 [ext_resource type="PackedScene" uid="uid://lr24x5o52koa" path="res://Scenes/Enemy.tscn" id="4_dqqll"]
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_w0xux")
 
 [node name="PlayerCharacter" parent="." groups=["player"] instance=ExtResource("1_v0wtq")]
 position = Vector2(1, 2)
@@ -33,3 +35,5 @@ position = Vector2(-466, -226)
 
 [node name="Enemy3" parent="." instance=ExtResource("4_dqqll")]
 position = Vector2(-464, 246)
+
+[editable path="PlayerCharacter/HUD"]

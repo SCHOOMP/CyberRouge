@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://lr24x5o52koa"]
 
 [ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_axhdc"]
-[ext_resource type="Texture2D" uid="uid://chn6pm7vs8mea" path="res://orc07.png" id="2_8eo2k"]
+[ext_resource type="Texture2D" uid="uid://chn6pm7vs8mea" path="res://Assets/orc07.png" id="2_8eo2k"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_olfof"]
 radius = 84.0238

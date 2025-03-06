@@ -9,3 +9,6 @@ res://Scenes/enemy.gd
 res://Scripts/pickup.gd
 res://Scripts/enemy.gd
 res://Scenes/Player.tscn
+res://Scripts/Player.gd
+res://Scenes/hud.gd
+res://Scenes/world.gd
