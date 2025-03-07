@@ -17,7 +17,7 @@ position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 rotation_smoothing_enabled = true
 
-[node name="HUD" parent="PlayerCharacter" instance=ExtResource("2_sy513")]
+[node name="HUD" parent="PlayerCharacter/Camera2D" instance=ExtResource("2_sy513")]
 
 [node name="Pickup" parent="." instance=ExtResource("2_oirxp")]
 position = Vector2(294, 41.5)
@@ -36,4 +36,4 @@ position = Vector2(-466, -226)
 [node name="Enemy3" parent="." instance=ExtResource("4_dqqll")]
 position = Vector2(-464, 246)
 
-[editable path="PlayerCharacter/HUD"]
+[editable path="PlayerCharacter/Camera2D/HUD"]

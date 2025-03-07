@@ -1,21 +1,17 @@
 extends CharacterBody2D
 
-@export var speed = 200
+@export var speed = 400
 @export var dash_speed = 600 
 @export var dash_duration = 0.2 
 @export var dash_cooldown = 0.5 
 @export var friction = 0.01
 @export var acceleration = 0.1
-
 @export var level = 1
 var experience = 0
 var experience_total = 0
 var experience_required = get_required_experiance(level + 1)
-
 @onready var bullet_scene = preload("res://Scenes/bullet_scene.tscn")
 @onready var firePoint = $FirePoint
-@onready var speed_label = $HUD/SpeedLabel
-
 var enemy_in_attack_range = false
 var attack_cooldown = true
 var health = 100
@@ -30,7 +26,6 @@ var boost_timer := 0.0
 func apply_speed_boost(amount: float, duration: float) -> void:
 	speed += amount
 	boost_timer = duration
-	update_speed_display()
 	print("Speed Boosted! New speed:", speed)
 
 func get_input():
@@ -70,7 +65,6 @@ func _physics_process(delta):
 		boost_timer -= delta
 		if boost_timer <= 0:
 			speed = base_speed
-			update_speed_display()
 
 	if is_dashing:
 		dash_timer -= delta
@@ -82,22 +76,15 @@ func _physics_process(delta):
 			velocity = velocity.lerp(direction.normalized() * speed, acceleration)
 		else:
 			velocity = velocity.lerp(Vector2.ZERO, friction)
-
 	if dash_cooldown_timer > 0:
 		dash_cooldown_timer -= delta
-
 	move_and_slide()
-	update_speed_display()
 
 func shoot():
 	var bullet = bullet_scene.instantiate()
 	bullet.global_position = firePoint.global_position
 	bullet.direction = (get_global_mouse_position() - firePoint.global_position).normalized()
 	get_parent().add_child(bullet)
-
-func update_speed_display() -> void:
-	if speed_label:
-		speed_label.text = "Speed: " + str(speed)
 
 # Function to take damage
 func take_damage(amount: int) -> void:
@@ -131,5 +118,6 @@ func gain_experience(amount):
 		
 func level_up():
 	level += 1
+	print("leveled Up!")
 	experience_required = get_required_experiance(level + 1)
 	

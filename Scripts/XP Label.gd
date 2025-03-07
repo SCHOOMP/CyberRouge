@@ -1,7 +1,8 @@
 extends Label
 
-func update_text(level, experience, required_xp):
+func update_text(level, experience, required_xp, speed):
 	text = """Level: %s
 			Exp: %s
 			Next Level: %s
-			""" % [level, experience, required_xp]
+			Speed: %s
+			""" % [level, experience, required_xp, speed]

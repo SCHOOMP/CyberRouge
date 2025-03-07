@@ -12,3 +12,4 @@ res://Scenes/Player.tscn
 res://Scripts/Player.gd
 res://Scenes/hud.gd
 res://Scenes/world.gd
+res://Scripts/XP Label.gd
