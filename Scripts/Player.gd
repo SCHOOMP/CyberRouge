@@ -27,6 +27,10 @@ func apply_speed_boost(amount: float, duration: float) -> void:
 	speed += amount
 	boost_timer = duration
 	print("Speed Boosted! New speed:", speed)
+	
+func apply_health(amount: float) -> void:
+	health += amount
+	print("Health healed! Health:", health)
 
 func get_input():
 	var input = Vector2()

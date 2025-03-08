@@ -14,3 +14,8 @@ res://Scenes/hud.gd
 res://Scenes/world.gd
 res://Scripts/XP Label.gd
 res://Scenes/Background.tscn
+res://Scenes/damage_pickup.tscn
+res://Scenes/damage_pickup.gd
+res://Scenes/pickup.tscn
+res://Scenes/health_pickup.tscn
+res://Scenes/health_pickup.gd
