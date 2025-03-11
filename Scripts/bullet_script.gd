@@ -6,7 +6,8 @@ var direction := Vector2.ZERO
 
 func _process(delta):
 	if direction != Vector2.ZERO:
-		position += direction * speed * delta 
+		position += direction * speed * delta
+		rotation = direction.angle()  # Rotate the bullet in the direction it's moving
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()  

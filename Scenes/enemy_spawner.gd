@@ -1,0 +1,23 @@
+extends Node2D
+
+@export var enemy_scene: PackedScene  # Assign your enemy scene in the Inspector
+@export var spawn_interval := 2.0  # Time (in seconds) between spawns
+@export var spawn_radius := 300  # Maximum distance from spawner
+
+func _ready():
+	start_spawning()
+
+func start_spawning():
+	# Start the spawning process on a loop
+	$Timer.wait_time = spawn_interval
+	$Timer.start()
+
+func _on_Timer_timeout():
+	spawn_enemy()
+
+func spawn_enemy():
+	if enemy_scene:
+		var enemy = enemy_scene.instantiate()
+		var random_offset = Vector2(randf_range(-spawn_radius, spawn_radius), randf_range(-spawn_radius, spawn_radius))
+		enemy.position = global_position + random_offset  # Place the enemy relative to spawner
+		get_parent().add_child(enemy)  # Add enemy to the scene

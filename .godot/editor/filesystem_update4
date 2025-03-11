@@ -19,3 +19,5 @@ res://Scenes/damage_pickup.gd
 res://Scenes/pickup.tscn
 res://Scenes/health_pickup.tscn
 res://Scenes/health_pickup.gd
+res://Scenes/EnemySpawner.tscn
+res://Scenes/enemy_spawner.gd
