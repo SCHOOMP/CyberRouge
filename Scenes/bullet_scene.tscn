@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://hgoyg8br4ixp"]
 
 [ext_resource type="Script" path="res://Scripts/bullet_script.gd" id="1_stucc"]
-[ext_resource type="Texture2D" uid="uid://cmhjm6bvhs5ao" path="res://bullet.png" id="2_i7dxw"]
+[ext_resource type="Texture2D" uid="uid://cmhjm6bvhs5ao" path="res://Assets/bullet.png" id="2_i7dxw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sn6ld"]
 size = Vector2(37, 13)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cy5gaeqgyj0w8"
-path="res://.godot/imported/Terrain (16x16).png-f072e8a5f99e915c05031c83401c87a9.ctex"
+uid="uid://b0bckmm760idy"
+path="res://.godot/imported/pngtree-pixel-style-fruit-lemon-vector-png-image_11349951.png-44d57a2dcb01aa1c7a800a91b0e89e16.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Terrain (16x16).png"
-dest_files=["res://.godot/imported/Terrain (16x16).png-f072e8a5f99e915c05031c83401c87a9.ctex"]
+source_file="res://Assets/pngtree-pixel-style-fruit-lemon-vector-png-image_11349951.png"
+dest_files=["res://.godot/imported/pngtree-pixel-style-fruit-lemon-vector-png-image_11349951.png-44d57a2dcb01aa1c7a800a91b0e89e16.ctex"]
 
 [params]
 

@@ -1,9 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://cao2sehhxfpov"]
 
-[ext_resource type="Texture2D" uid="uid://cy5gaeqgyj0w8" path="res://Terrain (16x16).png" id="1_gygmp"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_etxdb"]
+load_path = "res://.godot/imported/Terrain (16x16).png-f072e8a5f99e915c05031c83401c87a9.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ur4g5"]
-texture = ExtResource("1_gygmp")
+texture = SubResource("CompressedTexture2D_etxdb")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0

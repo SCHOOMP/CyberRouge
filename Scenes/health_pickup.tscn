@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dduhhr1rk5pn3"]
 
-[ext_resource type="Texture2D" uid="uid://b0bckmm760idy" path="res://pngtree-pixel-style-fruit-lemon-vector-png-image_11349951.png" id="1_30dhe"]
-[ext_resource type="Script" path="res://Scenes/health_pickup.gd" id="2_e6j2t"]
+[ext_resource type="Texture2D" uid="uid://b0bckmm760idy" path="res://Assets/pngtree-pixel-style-fruit-lemon-vector-png-image_11349951.png" id="1_30dhe"]
+[ext_resource type="Script" path="res://Scripts/health_pickup.gd" id="2_e6j2t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8lgkk"]
 radius = 148.29
